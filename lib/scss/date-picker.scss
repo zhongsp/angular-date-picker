@@ -1,0 +1,31 @@
+// Variables
+// -------------------------------
+$gray: rgba(210, 210, 210, 0.5);
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.calendar {
+  .calendar-nav-bar {
+    background-color: $gray;
+  }
+
+  .calendar-week-bar {
+    background-color: $gray;
+
+    ul {
+      padding: 0px;
+      margin: 0px;
+
+      li {
+        display: inline-block;
+        width: percentage(1/7);
+        list-style: none;
+        text-align: center;
+      }
+    }
+  }
+}
