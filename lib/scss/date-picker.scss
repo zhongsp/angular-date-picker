@@ -8,6 +8,10 @@ body {
   margin: 0px;
 }
 
+.clear {
+  clear: both;
+}
+
 div.calendar {
   .calendar-nav-bar {
     background-color: $gray;
@@ -27,5 +31,20 @@ div.calendar {
         text-align: center;
       }
     }
+  }
+
+  .calendar-content {
+    ul {
+      li {
+        float: left;
+        width: percentage(1/7);
+        list-style: none;
+        text-align: center;
+      }
+    }
+  }
+
+  .calendar-footer-bar {
+    background-color: $gray;
   }
 }

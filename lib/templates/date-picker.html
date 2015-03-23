@@ -1,18 +1,18 @@
-<div class="calendar">
-  <div class="calendar-content">
-    
+<div class="calendar {{cssClass}}">
+  <div class="calendar-nav-bar">
+    <a href="javascript:;">&lt; {{year}}</a>
   </div>
-  <div class="calendar-nav-bar"></div>
   <div class="calendar-week-bar">
+    <ul><li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul>
+  </div>
+  <div class="calendar-content">
+    <p>{{month + 1}}</p>
     <ul>
-      <li>Sun</li>
-      <li>Mon</li>
-      <li>Tue</li>
-      <li>Wed</li>
-      <li>Thu</li>
-      <li>Fri</li>
-      <li>Sat</li>
+      <li ng-repeat="day in daysInMonth"><span>{{day}}</span></li>
+      <div class="clear"></div>
     </ul>
   </div>
-  <div class="calendar-footer-bar"></div>
+  <div class="calendar-footer-bar">
+    <a href="javascript:;">Today</a>
+  </div>
 </div>
