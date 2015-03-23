@@ -1,0 +1,16 @@
+body {
+  padding: 0px;
+  margin: 0px; }
+
+div.calendar .calendar-nav-bar {
+  background-color: rgba(210, 210, 210, 0.5); }
+div.calendar .calendar-week-bar {
+  background-color: rgba(210, 210, 210, 0.5); }
+  div.calendar .calendar-week-bar ul {
+    padding: 0px;
+    margin: 0px; }
+    div.calendar .calendar-week-bar ul li {
+      display: inline-block;
+      width: 14.28571%;
+      list-style: none;
+      text-align: center; }
