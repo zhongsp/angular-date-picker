@@ -1,6 +1,15 @@
 // Variables
 // -------------------------------
-$gray: rgba(210, 210, 210, 0.5);
+$gray: rgb(247, 247, 247);
+$gray-darker: rgb(153, 153, 153);
+$red: rgb(255, 59, 48);
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$padding-base: 10px;
+$font-size-nav: 18px;
+$font-size-week-bar: 12px;
+$font-size-days: 14px;
+$font-size-footer: 18px;
+$day-cell-height: 50px;
 
 
 // Mixins
@@ -17,6 +26,9 @@ $gray: rgba(210, 210, 210, 0.5);
 }
 
 div.calendar {
+  height: 100%;
+  font-family: $font-family-sans-serif;
+
   p,
   ul {
     padding: 0px;
@@ -25,10 +37,23 @@ div.calendar {
 
   .calendar-nav-bar {
     background-color: $gray;
+    font-size: $font-size-nav;
+    font-weight: bold;
+    padding: $padding-base 0px 0px $padding-base;
+
+    a {
+      background: url(./img/arrow-l.png) left top no-repeat transparent;
+      background-size: $font-size-nav $font-size-nav;
+      color: $red;
+      display: inline-block;
+      padding-left: $font-size-nav;
+      text-decoration: none;
+    }
   }
 
   .calendar-week-bar {
     background-color: $gray;
+    font-size: $font-size-week-bar;
 
     ul {
 
@@ -36,18 +61,26 @@ div.calendar {
         display: inline-block;
         width: percentage(1/7);
         list-style: none;
+        padding: $padding-base 0px;
         text-align: center;
+
+        &:first-child,
+        &:last-child {
+          color: $gray-darker;
+        }
       }
     }
   }
 
   .calendar-day {
     display: none;
+    font-size: $font-size-days;
 
     ul {
 
       li {
         float: left;
+        height: $day-cell-height;
         width: percentage(1/7);
         list-style: none;
         text-align: center;
@@ -85,5 +118,6 @@ div.calendar {
 
   .calendar-footer-bar {
     background-color: $gray;
+    font-size: $font-size-footer;
   }
 }

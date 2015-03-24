@@ -1,50 +1,70 @@
 .clear {
   clear: both; }
 
-div.calendar p, div.calendar ul {
-  padding: 0px;
-  margin: 0px; }
-div.calendar .calendar-nav-bar {
-  background-color: rgba(210, 210, 210, 0.5); }
-div.calendar .calendar-week-bar {
-  background-color: rgba(210, 210, 210, 0.5); }
-  div.calendar .calendar-week-bar ul li {
-    display: inline-block;
-    width: 14.28571%;
-    list-style: none;
-    text-align: center; }
-div.calendar .calendar-day {
-  display: none; }
-  div.calendar .calendar-day ul li {
-    float: left;
-    width: 14.28571%;
-    list-style: none;
-    text-align: center; }
-    div.calendar .calendar-day ul li.today {
-      background-color: red; }
-  div.calendar .calendar-day.calendar-active-view {
-    display: block; }
-  div.calendar .calendar-day .calendar-week-offset-0 li:first-child {
-    margin-left: 0%; }
-  div.calendar .calendar-day .calendar-week-offset-1 li:first-child {
-    margin-left: 14.28571%; }
-  div.calendar .calendar-day .calendar-week-offset-2 li:first-child {
-    margin-left: 28.57143%; }
-  div.calendar .calendar-day .calendar-week-offset-3 li:first-child {
-    margin-left: 42.85714%; }
-  div.calendar .calendar-day .calendar-week-offset-4 li:first-child {
-    margin-left: 57.14286%; }
-  div.calendar .calendar-day .calendar-week-offset-5 li:first-child {
-    margin-left: 71.42857%; }
-  div.calendar .calendar-day .calendar-week-offset-6 li:first-child {
-    margin-left: 85.71429%; }
-div.calendar .calendar-month {
-  display: none; }
-  div.calendar .calendar-month.calendar-active-view {
-    display: block; }
-div.calendar .calendar-year {
-  display: none; }
-  div.calendar .calendar-year.calendar-active-view {
-    display: block; }
-div.calendar .calendar-footer-bar {
-  background-color: rgba(210, 210, 210, 0.5); }
+div.calendar {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  div.calendar p, div.calendar ul {
+    padding: 0px;
+    margin: 0px; }
+  div.calendar .calendar-nav-bar {
+    background-color: #f7f7f7;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0px 0px 10px; }
+    div.calendar .calendar-nav-bar a {
+      background: url(./img/arrow-l.png) left top no-repeat transparent;
+      background-size: 18px 18px;
+      color: #ff3b30;
+      display: inline-block;
+      padding-left: 18px;
+      text-decoration: none; }
+  div.calendar .calendar-week-bar {
+    background-color: #f7f7f7;
+    font-size: 12px; }
+    div.calendar .calendar-week-bar ul li {
+      display: inline-block;
+      width: 14.28571%;
+      list-style: none;
+      padding: 10px 0px;
+      text-align: center; }
+      div.calendar .calendar-week-bar ul li:first-child, div.calendar .calendar-week-bar ul li:last-child {
+        color: #999999; }
+  div.calendar .calendar-day {
+    display: none;
+    font-size: 14px; }
+    div.calendar .calendar-day ul li {
+      float: left;
+      height: 50px;
+      width: 14.28571%;
+      list-style: none;
+      text-align: center; }
+      div.calendar .calendar-day ul li.today {
+        background-color: red; }
+    div.calendar .calendar-day.calendar-active-view {
+      display: block; }
+    div.calendar .calendar-day .calendar-week-offset-0 li:first-child {
+      margin-left: 0%; }
+    div.calendar .calendar-day .calendar-week-offset-1 li:first-child {
+      margin-left: 14.28571%; }
+    div.calendar .calendar-day .calendar-week-offset-2 li:first-child {
+      margin-left: 28.57143%; }
+    div.calendar .calendar-day .calendar-week-offset-3 li:first-child {
+      margin-left: 42.85714%; }
+    div.calendar .calendar-day .calendar-week-offset-4 li:first-child {
+      margin-left: 57.14286%; }
+    div.calendar .calendar-day .calendar-week-offset-5 li:first-child {
+      margin-left: 71.42857%; }
+    div.calendar .calendar-day .calendar-week-offset-6 li:first-child {
+      margin-left: 85.71429%; }
+  div.calendar .calendar-month {
+    display: none; }
+    div.calendar .calendar-month.calendar-active-view {
+      display: block; }
+  div.calendar .calendar-year {
+    display: none; }
+    div.calendar .calendar-year.calendar-active-view {
+      display: block; }
+  div.calendar .calendar-footer-bar {
+    background-color: #f7f7f7;
+    font-size: 18px; }
