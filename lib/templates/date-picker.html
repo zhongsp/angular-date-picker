@@ -1,18 +1,32 @@
 <div class="calendar {{cssClass}}">
   <div class="calendar-nav-bar">
-    <a href="javascript:;">&lt; {{year}}</a>
+    <a href="javascript:;" ng-click="viewAllYears()" ng-show="model.currentView == 'month'">&lt; {{model.year}}</a>
+    <a href="javascript:;" ng-click="viewAllMonths()" ng-show="model.currentView == 'day'">&lt; {{model.months[model.month]}}</a>
   </div>
   <div class="calendar-week-bar">
     <ul><li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul>
   </div>
-  <div class="calendar-content">
-    <p>{{month + 1}}</p>
-    <ul>
-      <li ng-repeat="day in daysInMonth"><span>{{day}}</span></li>
+  <div class="calendar-day" ng-class="{ 'calendar-active-view': model.currentView == 'day' }">
+    <ul class="calendar-week-offset-{{model.fisrtDayOffset}}">
+      <li ng-repeat="day in model.daysInMonth" 
+        ng-class="{ 'today': today.month == model.month && today.day == day }"
+        ng-click="selectDate(day)"><span>{{day}}</span></li>
       <div class="clear"></div>
     </ul>
   </div>
+  <div class="calendar-month" ng-class="{ 'calendar-active-view': model.currentView == 'month' }">
+    <ul>
+      <li ng-repeat="month in model.months" ng-click="setMonth($index)"><span>{{month}}</span></li>
+    </ul>
+  </div>
+  <div class="calendar-year" ng-class="{ 'calendar-active-view': model.currentView == 'year' }">
+    <ul>
+      <li ng-repeat="year in model.years" ng-click="setYear(year)"><span>{{year}}</span></li>
+    </ul>
+  </div>
   <div class="calendar-footer-bar">
-    <a href="javascript:;">Today</a>
+    <a href="javascript:;" ng-click="viewMonth(-1)" ng-show="model.currentView == 'day'">Last month</a>
+    <a href="javascript:;" ng-click="viewMonth(0)">Today</a>
+    <a href="javascript:;" ng-click="viewMonth(1)" ng-show="model.currentView == 'day'">Next month</a>
   </div>
 </div>

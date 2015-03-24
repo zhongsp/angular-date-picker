@@ -3,16 +3,26 @@
 $gray: rgba(210, 210, 210, 0.5);
 
 
-body {
-  padding: 0px;
-  margin: 0px;
+// Mixins
+// -------------------------------
+@mixin calendar-week-offset($offset) {
+  .calendar-week-offset-#{$offset} li:first-child {
+    margin-left: percentage(1/7) * $offset;
+  }
 }
+
 
 .clear {
   clear: both;
 }
 
 div.calendar {
+  p,
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }
+
   .calendar-nav-bar {
     background-color: $gray;
   }
@@ -21,8 +31,6 @@ div.calendar {
     background-color: $gray;
 
     ul {
-      padding: 0px;
-      margin: 0px;
 
       li {
         display: inline-block;
@@ -33,14 +41,45 @@ div.calendar {
     }
   }
 
-  .calendar-content {
+  .calendar-day {
+    display: none;
+
     ul {
+
       li {
         float: left;
         width: percentage(1/7);
         list-style: none;
         text-align: center;
+
+        &.today {
+          background-color: red;
+        }
       }
+    }
+
+    &.calendar-active-view {
+      display: block;
+    }
+
+    @for $i from 0 through 6 {
+      @include calendar-week-offset($i);
+    }
+  }
+
+  .calendar-month {
+    display: none;
+
+    &.calendar-active-view {
+      display: block;
+    }
+  }
+
+  .calendar-year {
+    display: none;
+
+    &.calendar-active-view {
+      display: block;
     }
   }
 

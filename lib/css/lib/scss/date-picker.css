@@ -1,0 +1,27 @@
+body {
+  padding: 0px;
+  margin: 0px; }
+
+.clear {
+  clear: both; }
+
+div.calendar .calendar-nav-bar {
+  background-color: rgba(210, 210, 210, 0.5); }
+div.calendar .calendar-week-bar {
+  background-color: rgba(210, 210, 210, 0.5); }
+  div.calendar .calendar-week-bar ul {
+    padding: 0px;
+    margin: 0px; }
+    div.calendar .calendar-week-bar ul li {
+      display: inline-block;
+      width: 14.28571%;
+      list-style: none;
+      text-align: center; }
+div.calendar .calendar-content ul li {
+  float: left;
+  width: 14.28571%;
+  list-style: none;
+  text-align: center; }
+div.calendar .calendar-footer-bar {
+  background-color: rgba(210, 210, 210, 0.5);
+  font-size: 1px; }

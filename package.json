@@ -1,0 +1,32 @@
+{
+  "name": "angular-date-picker",
+  "version": "0.0.1",
+  "description": "Angular date picker",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhongsp/angular-date-picker"
+  },
+  "keywords": [
+    "angular",
+    "date",
+    "picker"
+  ],
+  "author": "zhongsp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhongsp/angular-date-picker/issues"
+  },
+  "homepage": "https://github.com/zhongsp/angular-date-picker",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3"
+  }
+}
