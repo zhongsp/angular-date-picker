@@ -3,45 +3,61 @@
 
 div.calendar {
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-  div.calendar p, div.calendar ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  line-height: 1.42857; }
+  div.calendar p, div.calendar ul, div.calendar div {
     padding: 0px;
     margin: 0px; }
+  div.calendar a {
+    color: #F44336;
+    font-weight: bold;
+    text-decoration: none; }
+  div.calendar a, div.calendar li {
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; }
+    div.calendar a[href]:hover, div.calendar li[href]:hover {
+      cursor: pointer; }
+  div.calendar .calendar-active-view {
+    display: block !important;
+    opacity: 1 !important; }
   div.calendar .calendar-nav-bar {
     background-color: #EEEEEE;
-    font-size: 18px;
     font-weight: bold;
-    padding: 10px 0px 0px 10px; }
+    padding: 10px; }
     div.calendar .calendar-nav-bar a {
-      background: url(./img/arrow-l.png) left top no-repeat transparent;
+      background: url(./img/arrow-l.png) left 50% no-repeat transparent;
       background-size: 18px 18px;
       color: #F44336;
-      display: inline-block;
-      padding-left: 18px;
-      text-decoration: none; }
+      padding-left: 18px; }
   div.calendar .calendar-week-bar {
     background-color: #EEEEEE;
-    font-size: 12px; }
+    font-size: 14px;
+    line-height: 1.5; }
     div.calendar .calendar-week-bar ul li {
       display: inline-block;
       width: 14.28571%;
       list-style: none;
-      padding: 10px 0px;
       text-align: center; }
       div.calendar .calendar-week-bar ul li:first-child, div.calendar .calendar-week-bar ul li:last-child {
         color: #9E9E9E; }
   div.calendar .calendar-day {
     display: none;
-    font-size: 18px;
+    opacity: 0;
     padding-top: 5px;
-    overflow: scroll; }
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 66.71429px;
+    bottom: 45.71429px; }
     div.calendar .calendar-day ul li {
       border-top: solid 1px #EEEEEE;
       float: left;
       height: 60px;
-      width: 14.28571%;
       list-style: none;
-      text-align: center; }
+      text-align: center;
+      width: 14.28571%; }
       div.calendar .calendar-day ul li span {
         position: relative;
         top: 50%;
@@ -59,8 +75,6 @@ div.calendar {
       div.calendar .calendar-day ul li.today span {
         background-color: #F44336;
         color: #FFF; }
-    div.calendar .calendar-day.calendar-active-view {
-      display: block; }
     div.calendar .calendar-day .calendar-week-offset-0 li:first-child {
       margin-left: 0%; }
     div.calendar .calendar-day .calendar-week-offset-1 li:first-child {
@@ -76,9 +90,13 @@ div.calendar {
     div.calendar .calendar-day .calendar-week-offset-6 li:first-child {
       margin-left: 85.71429%; }
   div.calendar .calendar-month {
-    display: none; }
-    div.calendar .calendar-month.calendar-active-view {
-      display: block; }
+    display: none;
+    opacity: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 45.71429px;
+    bottom: 45.71429px; }
     div.calendar .calendar-month ul li {
       float: left;
       width: 33.33333%;
@@ -89,10 +107,13 @@ div.calendar {
       vertical-align: middle; }
   div.calendar .calendar-year {
     display: none;
-    height: 90%;
-    overflow: scroll; }
-    div.calendar .calendar-year.calendar-active-view {
-      display: block; }
+    opacity: 0;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 0px;
+    bottom: 45.71429px; }
     div.calendar .calendar-year ul li {
       list-style: none;
       border-top: solid 1px #EEEEEE;
@@ -103,23 +124,13 @@ div.calendar {
     background-color: #EEEEEE;
     border-top: solid 1px #E0E0E0;
     bottom: 0px;
-    font-size: 18px;
-    position: fixed;
     padding: 10px 0px;
+    position: fixed;
     width: 100%;
     text-align: center; }
-    div.calendar .calendar-footer-bar a {
-      text-decoration: none;
-      color: #F44336;
-      font-weight: bold;
-      padding-left: 10px;
-      padding-right: 10px;
-      -webkit-user-drag: none;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-tap-highlight-color: transparent; }
-      div.calendar .calendar-footer-bar a[href]:hover {
-        cursor: pointer; }
-      div.calendar .calendar-footer-bar a:first-child {
-        float: left; }
-      div.calendar .calendar-footer-bar a:last-child {
-        float: right; }
+    div.calendar .calendar-footer-bar a:first-child {
+      float: left;
+      padding-left: 10px; }
+    div.calendar .calendar-footer-bar a:last-child {
+      float: right;
+      padding-right: 10px; }

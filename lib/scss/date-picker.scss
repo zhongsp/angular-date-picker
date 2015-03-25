@@ -3,13 +3,23 @@
 $gray: #EEEEEE;
 $gray-darker: #9E9E9E;
 $red: #F44336;
+
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$padding-base: 10px;
-$font-size-nav: 18px;
-$font-size-week-bar: 12px;
-$font-size-days: 18px;
-$font-size-footer: 18px;
+
+$font-size-base: 18px;
+$font-size-small: 14px;
+
+$line-height-base:                1.428571429;
+$line-height-small:               1.5;
+
+$content-padding:                 10px;
+
+$calculated-nav-height: $content-padding * 2 + $font-size-base * $line-height-base;
+$calculated-week-bar-height: $font-size-small * $line-height-small;
+$calculated-footer-height: $content-padding * 2 + $font-size-base * $line-height-base;
+
 $day-cell-height: 60px;
+$border: solid 1px $gray;
 
 
 // Mixins
@@ -51,32 +61,55 @@ $day-cell-height: 60px;
 div.calendar {
   height: 100%;
   font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 
   p,
-  ul {
+  ul,
+  div {
     padding: 0px;
     margin: 0px;
   }
 
+  a {
+    color: $red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a,
+  li {
+    // Remove tap highlight color begin
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    &[href]:hover {
+      cursor: pointer;
+    }
+  }
+
+  .calendar-active-view {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
   .calendar-nav-bar {
     background-color: $gray;
-    font-size: $font-size-nav;
     font-weight: bold;
-    padding: $padding-base 0px 0px $padding-base;
+    padding: $content-padding;
 
     a {
-      background: url(./img/arrow-l.png) left top no-repeat transparent;
-      background-size: $font-size-nav $font-size-nav;
+      background: url(./img/arrow-l.png) left 50% no-repeat transparent;
+      background-size: $font-size-base $font-size-base;
       color: $red;
-      display: inline-block;
-      padding-left: $font-size-nav;
-      text-decoration: none;
+      padding-left: 18px;
     }
   }
 
   .calendar-week-bar {
     background-color: $gray;
-    font-size: $font-size-week-bar;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
 
     ul {
 
@@ -84,7 +117,6 @@ div.calendar {
         display: inline-block;
         width: percentage(1/7);
         list-style: none;
-        padding: $padding-base 0px;
         text-align: center;
 
         &:first-child,
@@ -97,19 +129,23 @@ div.calendar {
 
   .calendar-day {
     display: none;
-    font-size: $font-size-days;
-    padding-top: 5px;
-    overflow: scroll;
+    opacity: 0;
+    padding-top: $content-padding / 2;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: $calculated-nav-height + $calculated-week-bar-height;
+    bottom: $calculated-footer-height;
 
     ul {
 
       li {
-        border-top: solid 1px $gray;
+        border-top: $border;
         float: left;
         height: $day-cell-height;
-        width: percentage(1/7);
         list-style: none;
         text-align: center;
+        width: percentage(1/7);
 
         span {
           @include center;
@@ -127,10 +163,6 @@ div.calendar {
       }
     }
 
-    &.calendar-active-view {
-      display: block;
-    }
-
     @for $i from 0 through 6 {
       @include calendar-week-offset($i);
     }
@@ -138,10 +170,12 @@ div.calendar {
 
   .calendar-month {
     display: none;
-
-    &.calendar-active-view {
-      display: block;
-    }
+    opacity: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: $calculated-nav-height;
+    bottom: $calculated-footer-height;
 
     ul {
 
@@ -159,22 +193,23 @@ div.calendar {
 
   .calendar-year {
     display: none;
-    height: 90%;
-    overflow: scroll;
-
-    &.calendar-active-view {
-      display: block;
-    }
+    opacity: 0;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 0px;
+    bottom: $calculated-footer-height;
 
     ul {
 
       li {
         list-style: none;
-        border-top: solid 1px $gray;
+        border-top: $border;
         padding: 15px;
 
         &:last-child {
-          border-bottom: solid 1px $gray;
+          border-bottom: $border;
         }
       }
     }
@@ -184,33 +219,20 @@ div.calendar {
     background-color: $gray;
     border-top: solid 1px #E0E0E0;
     bottom: 0px;
-    font-size: $font-size-footer;
+    padding: $content-padding 0px;
     position: fixed;
-    padding: 10px 0px;
     width: 100%;
     text-align: center;
 
     a {
-      text-decoration: none;
-      color: $red;
-      font-weight: bold;
-      padding-left: $padding-base;
-      padding-right: $padding-base;
-      
-      // Remove tap highlight color begin
-      -webkit-user-drag: none;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-tap-highlight-color: transparent;
-      &[href]:hover {
-        cursor: pointer;
-      }
-      // Remove tap highlight color end
 
       &:first-child {
         float: left;
+        padding-left: $content-padding;
       }
       &:last-child {
         float: right;
+        padding-right: $content-padding;
       }
     }
   }
