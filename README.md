@@ -13,4 +13,4 @@ View the example in `test` folder.
 
 ## Screenshots
 
-<img src="./doc/screenshot/screenshot_1.PNG" alt="Days view" style="width: 320px"> <img src="./doc/screenshot/screenshot_2.PNG" alt="Months view" style="width: 320px"> <img src="./doc/screenshot/screenshot_3.PNG" alt="Years view" style="width: 320px">
+<img src="./doc/screenshot/screenshot_1.PNG" alt="Days view" width="260"> <img src="./doc/screenshot/screenshot_2.PNG" alt="Months view" width="260"> <img src="./doc/screenshot/screenshot_3.PNG" alt="Years view" width="260">
