@@ -9,7 +9,7 @@
   <div class="calendar-day" ng-class="{ 'calendar-active-view': model.currentView == 'day' }">
     <ul class="calendar-week-offset-{{model.fisrtDayOffset}}">
       <li ng-repeat="day in model.daysInMonth" 
-        ng-class="{ 'today': today.month == model.month && today.day == day }"
+        ng-class="{ 'today': today.year == model.year && today.month == model.month && today.day == day }"
         ng-click="selectDate(day)"><span>{{day}}</span></li>
       <div class="clear"></div>
     </ul>

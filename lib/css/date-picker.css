@@ -33,7 +33,8 @@ div.calendar {
   div.calendar .calendar-day {
     display: none;
     font-size: 18px;
-    padding-top: 5px; }
+    padding-top: 5px;
+    overflow: scroll; }
     div.calendar .calendar-day ul li {
       border-top: solid 1px #EEEEEE;
       float: left;
@@ -103,8 +104,8 @@ div.calendar {
     border-top: solid 1px #E0E0E0;
     bottom: 0px;
     font-size: 18px;
-    position: absolute;
-    padding: 15px 0px;
+    position: fixed;
+    padding: 10px 0px;
     width: 100%;
     text-align: center; }
     div.calendar .calendar-footer-bar a {

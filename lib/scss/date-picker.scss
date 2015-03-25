@@ -99,6 +99,7 @@ div.calendar {
     display: none;
     font-size: $font-size-days;
     padding-top: 5px;
+    overflow: scroll;
 
     ul {
 
@@ -184,8 +185,8 @@ div.calendar {
     border-top: solid 1px #E0E0E0;
     bottom: 0px;
     font-size: $font-size-footer;
-    position: absolute;
-    padding: 15px 0px;
+    position: fixed;
+    padding: 10px 0px;
     width: 100%;
     text-align: center;
 
