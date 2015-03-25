@@ -2,7 +2,7 @@
 
 Exporting an angular module named: **datepicker**. It provides a directive **datepicker**. This directive will generate a calendar looks like the calendar app in iPhones.
 
-# Main files
+## Main files
 
 * build/angular-date-picker.js
 * build/angular-date-picker.css
