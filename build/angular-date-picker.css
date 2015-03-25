@@ -50,7 +50,8 @@ div.calendar {
     -webkit-overflow-scrolling: touch;
     position: absolute;
     top: 66.71429px;
-    bottom: 45.71429px; }
+    bottom: 45.71429px;
+    width: 100%; }
     div.calendar .calendar-day ul li {
       border-top: solid 1px #EEEEEE;
       float: left;
@@ -96,7 +97,8 @@ div.calendar {
     -webkit-overflow-scrolling: touch;
     position: absolute;
     top: 45.71429px;
-    bottom: 45.71429px; }
+    bottom: 45.71429px;
+    width: 100%; }
     div.calendar .calendar-month ul li {
       float: left;
       width: 33.33333%;
@@ -113,7 +115,8 @@ div.calendar {
     -webkit-overflow-scrolling: touch;
     position: absolute;
     top: 0px;
-    bottom: 45.71429px; }
+    bottom: 45.71429px;
+    width: 100%; }
     div.calendar .calendar-year ul li {
       list-style: none;
       border-top: solid 1px #EEEEEE;
