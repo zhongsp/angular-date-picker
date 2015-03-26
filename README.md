@@ -52,3 +52,9 @@ $ gulp build
 ## Screenshots
 
 <img src="./doc/screenshot/screenshot_1.PNG" alt="Days view" width="260"> <img src="./doc/screenshot/screenshot_2.PNG" alt="Months view" width="260"> <img src="./doc/screenshot/screenshot_3.PNG" alt="Years view" width="260">
+
+## Author
+Patrick Zhong ([@zhongsp](https://twitter.com/zhongsp))
+
+## License
+[MIT License](http://www.opensource.org/licenses/mit-license.php)
