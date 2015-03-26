@@ -61,6 +61,7 @@ $border:                          solid 1px $gray;
 }
 
 div.calendar {
+  background-color: #FFFFFF;
   height: 100%;
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
@@ -92,7 +93,6 @@ div.calendar {
 
   .calendar-active-view {
     display: block !important;
-    opacity: 1 !important;
   }
 
   .calendar-nav-bar {
@@ -130,8 +130,8 @@ div.calendar {
   }
 
   .calendar-day {
+    background-color: #FFFFFF;
     display: none;
-    opacity: 0;
     padding-top: $content-padding / 2;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -172,8 +172,8 @@ div.calendar {
   }
 
   .calendar-month {
+    background-color: #FFFFFF;
     display: none;
-    opacity: 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: absolute;
@@ -196,8 +196,8 @@ div.calendar {
   }
 
   .calendar-year {
+    background-color: #FFFFFF;
     display: none;
-    opacity: 0;
     width: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
