@@ -34,7 +34,7 @@ gulp.task('clean', function() {
 
 });
 
-gulp.task('build', ['concat'], function() {
+gulp.task('build', ['sass', 'concat'], function() {
   gulp.src('./build/templates.js')
     .pipe(clean());
 

@@ -12,19 +12,19 @@ Exporting an angular module named: **datepicker**. It provides a directive **dat
 
 See the [sample](./test/index.html) in test folder.
 
-1. Include `angular-date-picker.css`
+* Include `angular-date-picker.css`
 ```html
 <link rel="stylesheet" href="[path to css file]/angular-date-picker.css">
 ```
-1. Include `angular-date-picker.js`
+* Include `angular-date-picker.js`
 ```html
 <script src="[path to js file]/angular-date-picker.js"></script>
 ```
-1. Your main app module require `datepicker` as a dependency
+* Your main app module require `datepicker` as a dependency
 ```js
 angular.module('app', ['datepicker'])
 ```
-1. Use the exported datepicker directive
+* Use the exported datepicker directive
 ```html
 <div datepicker="model.date" css-class="my-datepicker" current-date="2015-03-23T12:08:44.209Z"
     on-select-date="selectDate(date)"></div>

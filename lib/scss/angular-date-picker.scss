@@ -1,25 +1,25 @@
 // Variables
 // -------------------------------
-$gray: #EEEEEE;
-$gray-darker: #9E9E9E;
-$red: #F44336;
+$gray:                            #EEEEEE;
+$gray-darker:                     #9E9E9E;
+$red:                             #F44336;
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-family-sans-serif:          "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$font-size-base: 18px;
-$font-size-small: 14px;
+$font-size-base:                  18px;
+$font-size-small:                 14px;
 
 $line-height-base:                1.428571429;
 $line-height-small:               1.5;
 
 $content-padding:                 10px;
 
-$calculated-nav-height: $content-padding * 2 + $font-size-base * $line-height-base;
-$calculated-week-bar-height: $font-size-small * $line-height-small;
-$calculated-footer-height: $content-padding * 2 + $font-size-base * $line-height-base;
+$calculated-nav-height:           $content-padding * 2 + $font-size-base * $line-height-base;
+$calculated-week-bar-height:      $font-size-small * $line-height-small;
+$calculated-footer-height:        $content-padding * 2 + $font-size-base * $line-height-base;
 
-$day-cell-height: 60px;
-$border: solid 1px $gray;
+$day-cell-height:                 60px;
+$border:                          solid 1px $gray;
 
 
 // Mixins
@@ -54,6 +54,8 @@ $border: solid 1px $gray;
 }
 
 
+// Styles
+// -------------------------------
 .clear {
   clear: both;
 }
